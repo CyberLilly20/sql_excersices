@@ -3,24 +3,31 @@
 
 #
 # 1: Get the cities with a name starting with ping sorted by their population with the least populated cities first
+select * from city where name like 'ping%' order by Population asc;
 #
 #
 # 2: Get the cities with a name starting with ran sorted by their population with the most populated cities first
+select * from city where name like 'ran' order by Population desc;
 #
 #
 # 3: Count all cities
+select count(*) from city;
 #
 #
 # 4: Get the average population of all cities
+select avg(population) from city;
 #
 #
 # 5: Get the biggest population found in any of the cities
+select max(population) from city;
 #
 #
 # 6: Get the smallest population found in any of the cities
+select min(population) from city;
 #
 #
 # 7: Sum the population of all cities with a population below 10000
+select sum(population) from city where Population < 10000;
 #
 #
 # 8: Count the cities with the countrycodes MOZ and VNM
