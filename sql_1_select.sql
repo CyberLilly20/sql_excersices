@@ -36,7 +36,7 @@ select Name and District from city where CountryCode like 'tto';
 #
 #
 # 6: Get the name and district named as nm,dist from the cities where the countrycode is "arm"
--- select name and district 
+ select name as nm, district dist from city where CountryCode = 'arm'; 
 #
 #
 # 7: Get the cities with a name that starts with "bor"
@@ -48,9 +48,11 @@ select * from city where Name like '%orto%';
 #
 #
 # 9: Get the cities that has a population below 1000
+select * from city where Population < 1000;
 #
 #
 # 10: Get the unique countrycodes from the cities that has a population below 1000
+select distinct countrycode from city where Population <1000;
 #
 #
 # 11: Get the cities with the countrycode UKR that has more than 1000000 (one million) in population
